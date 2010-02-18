@@ -1,0 +1,152 @@
+body{
+    font-family : Calibri, "Lucida Grande", Arial, Verdana;
+    background-color : #FFFFFF;
+}
+
+.mainPanel{
+    width : 800px;
+    margin-left: auto;
+    margin-right:auto;
+    background : white;
+}
+
+.inputPanel{
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+
+
+.tweetPanel{
+    font-family : Arial;
+    background : #FCFCFC;
+    color : #0F0F0F;
+    font-size   : 0.9em;
+    border-bottom : 1px dashed #BBBBBB;
+    padding: 10px;
+}
+
+.tweetPanel-hover{
+    background : #F1F1F1;
+}
+
+
+.tweetPanel img{
+    height : 40px;
+    width : 40px;
+    border : none;
+    padding-right : 10px;
+}
+
+.query{
+    margin : 5px;
+	width : 330px;
+	background-color : white;
+}
+
+
+
+.busy{
+    padding-left : 5px;
+}
+
+
+
+.heading{
+        color : grey;
+	display: inline;
+}
+
+.closeButton{
+    border : none;
+    width : 32px;
+    height : 32px;
+    background: url("delete.png") no-repeat;
+    margin-bottom: -16px;
+}
+
+.googleMapPopupPanel .googleMapPanel{
+    margin-left : 16px;
+    border : 1px grey solid;
+    border-bottom : 2px grey solid;
+    border-right: 2px grey solid;
+    padding : 12px;
+    background : #EFEFEF;
+}
+
+.tweetViewUserName, .tweetViewUserLocation, .html-face, .tweetViewText{
+    display: inline;
+    margin-right : 1pt;
+}
+
+.tweetViewUserLocation{
+    margin : 5px;
+    color : grey;
+    
+    text-decoration: underline;
+    cursor : pointer;
+}
+
+.tweetViewUserName a{
+    color : green;
+}
+
+.title{
+    background: url("globe.png") no-repeat top left;
+    padding-bottom : 12px;
+    padding-left   : 64px;
+}
+
+#applicationName{
+    font-size : 3em;
+    text-shadow: grey 2px 2px 2px;
+}
+
+#applicationDescription{
+    padding-left : 10px;
+    color : grey;
+}
+
+.gwt-TabBar{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom : 3px;
+    background : #E1E1E1;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-left-radius :5px;
+    -webkit-border-top-right-radius :5px;
+}
+
+.gwt-TabBar .gwt-TabBarItem{
+    margin : 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor : pointer;
+}
+
+.gwt-TabBar .gwt-TabBarItem-Selected{
+    background-color : #BBBBBB;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color : white;
+    font-weight : bold;
+}
+
+.googleMapPanel, .searchResultsPanel{
+    border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+}
+
+
+.bottomPanel{
+    margin : 10px;
+}
+
+
+.bottomPanel a{
+    color : grey;
+    font-family : Verdana;
+    font-size : 8pt;
+}
+
