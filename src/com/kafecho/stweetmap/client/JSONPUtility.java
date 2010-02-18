@@ -13,7 +13,6 @@ package com.kafecho.stweetmap.client;
  */
 public class JSONPUtility{
 	
-	private static int count = 0;
 	
 	/**
 	 * Get the content of the URL.
