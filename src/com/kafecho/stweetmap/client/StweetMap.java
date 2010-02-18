@@ -32,7 +32,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 
 /**
- * Entry point classes define <code>onModuleLoad()</code>.
+ * Main GWT class.
+ * @author Guillaume Belrose
  */
 public class StweetMap implements EntryPoint,StatusMessageViewListener{
 	
@@ -122,10 +123,13 @@ public class StweetMap implements EntryPoint,StatusMessageViewListener{
 	protected void doSearch() {
 		searchResultsPanel.clear();
 		googleMapPanel.clearMarkers();
-		String text = searchInputPanel.getQuery().getText();
+		String query = searchInputPanel.getQuery().getText();
 		searchInputPanel.getBusy().setVisible(true);
 		
-		JSONPUtility.get("http://search.twitter.com/search.json?q=" + URL.encode(text) + "&callback=", new JSONPRequestHandler(){
+		String encodedQuery = URL.encodeComponent(query);
+		GWT.log("Encoded query: " + encodedQuery);
+		
+		JSONPUtility.get("http://search.twitter.com/search.json?q=" + encodedQuery + "&rpp=" + Config.returnsPerSearch + "&callback=", new JSONPRequestHandler(){
 		public void onRequestComplete(JavaScriptObject obj) {
 			searchInputPanel.getBusy().setVisible(false);
 			JSONObject json = new JSONObject(obj);
@@ -134,7 +138,8 @@ public class StweetMap implements EntryPoint,StatusMessageViewListener{
 				JSONObject post = (JSONObject) posts.get(i);
 				StatusMessage statusMessage = new StatusMessage(post);
 				displayStatusMessage(statusMessage);
-				checkLocation( statusMessage );
+				if (Config.isGeolocationEnabled)
+					checkLocation( statusMessage );
 			}
 		}});
 	}

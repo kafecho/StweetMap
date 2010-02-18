@@ -15,7 +15,7 @@ import com.google.gwt.user.client.ui.PopupPanel;
 
 /**
  * Wraps a {@link GoogleMapPanel} around a popup panel.
- * @author guillaume
+ * @author Guillaume Belrose
  *
  */
 public class GoogleMapPopupPanel extends PopupPanel {

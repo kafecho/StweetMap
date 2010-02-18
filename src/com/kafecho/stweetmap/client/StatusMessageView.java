@@ -22,7 +22,7 @@ import com.google.gwt.user.client.ui.PushButton;
 
 /**
  * Graphical representation of a {@link StatusMessage}
- * @author gubel
+ * @author Guillaume Belrose
  */
 public class StatusMessageView extends Composite implements StatusMessageListener, EventListener{
 	

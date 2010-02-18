@@ -9,7 +9,7 @@ package com.kafecho.stweetmap.client;
 
 /**
  * To receive notifications of changes to a {@link StatusMessage}.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public interface StatusMessageListener{
 	void onLocationSet();

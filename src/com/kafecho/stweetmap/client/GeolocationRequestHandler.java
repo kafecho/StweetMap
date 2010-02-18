@@ -11,7 +11,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Handler passed to the {@link GeolocationService} for asynchronous address lookup.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public interface GeolocationRequestHandler {
 	

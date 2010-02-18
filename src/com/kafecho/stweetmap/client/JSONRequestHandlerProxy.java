@@ -11,7 +11,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The proxy is used to wrap the {@link JSONPRequestHandler} for garbage collection purposes.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public class JSONRequestHandlerProxy implements JSONPRequestHandler{
 

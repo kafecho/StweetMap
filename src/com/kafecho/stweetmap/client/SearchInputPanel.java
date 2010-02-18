@@ -17,7 +17,7 @@ public class SearchInputPanel extends Composite {
 
 	/**
 	 * Listens for keyboard events on the query field to enable or disable the search button.
-	 * @author gubel
+	 * @author Guillaume Belrose
 	 */
 	public class KeyboardEventHandler implements KeyUpHandler,KeyDownHandler,KeyPressHandler{
 		private void checkQuery(){

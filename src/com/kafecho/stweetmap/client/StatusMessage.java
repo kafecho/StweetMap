@@ -12,7 +12,7 @@ import com.google.gwt.json.client.JSONString;
 
 /**
  * A class to model a Twitter status update.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public class StatusMessage{
 	

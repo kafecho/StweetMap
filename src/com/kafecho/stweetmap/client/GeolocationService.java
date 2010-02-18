@@ -13,7 +13,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 /**
  * The {@link GeolocationService} is a thin GWT wrapper around the Geocoder object part of Google Maps V3.
  * It is used to translate location strings into (latitude,longitude) information.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public class GeolocationService {
 	private JavaScriptObject geocoder = null;

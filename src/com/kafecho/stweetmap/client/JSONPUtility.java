@@ -9,7 +9,7 @@ package com.kafecho.stweetmap.client;
 
 /**
  * A utility class to facilitate the creation of JSONP requests to 3rd party services. 
- * @author gubel
+ * @author Guillaume Belrose
  */
 public class JSONPUtility{
 	

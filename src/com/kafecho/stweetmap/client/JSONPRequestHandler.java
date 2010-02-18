@@ -11,7 +11,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Interface for a handler to be notified when a JSONP request completes.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public interface JSONPRequestHandler{
 	/**

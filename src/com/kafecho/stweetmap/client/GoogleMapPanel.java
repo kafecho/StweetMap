@@ -15,7 +15,7 @@ import com.google.gwt.user.client.ui.HasWidgets;
 
 /**
  * Class that wraps a GoogleMaps V3 map as an {@link HTML} GWT object which can be added to a page.
- * @author guillaume
+ * @author Guillaume Belrose
  */
 public class GoogleMapPanel extends HTML{
 	
