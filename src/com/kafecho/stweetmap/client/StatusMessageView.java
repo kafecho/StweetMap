@@ -18,6 +18,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PushButton;
 
 /**
@@ -52,11 +53,13 @@ public class StatusMessageView extends Composite implements StatusMessageListene
 		statusMessagePanel.add(userPhoto);
 
 		textContainer = new FlowPanel();
-		//textContainer = new HorizontalPanel();
 		textContainer.addStyleName("textContainer");
 		
 		statusMessagePanel.add(textContainer);
 		statusMessagePanel.setCellWidth(textContainer,"100%");
+		
+		Label createdAt = new Label("Posted on " + statusMessage.getCreatedAt());
+		createdAt.addStyleName("tweetViewCreatedAt");
 		
 		userName = new HTML("<a href='http://www.twitter.com/"+statusMessage.getUser()+"' target='_blank'>"+statusMessage.getUser() + "</a>");
 		userName.addStyleName("tweetViewUsername");
@@ -83,6 +86,7 @@ public class StatusMessageView extends Composite implements StatusMessageListene
 		textContainer.add(userName);
 		textContainer.add(userLocation);
 		textContainer.add(statusMessageText);
+		textContainer.add(createdAt);
 		
 		//textContainer.setCellWidth(tweetText,"100%");
 		

@@ -21,6 +21,7 @@ public class StatusMessage{
 	private String text;
 	private String profileImageURL;
 	private String location;
+	private String createdAt;
 	public 	Double lat = null;
 	private Double lng = null;
 
@@ -33,6 +34,7 @@ public class StatusMessage{
 		user = ((JSONString) json.get("from_user")).stringValue();
 		text = ((JSONString) json.get("text")).stringValue();
 		profileImageURL = ((JSONString) json.get("profile_image_url")).stringValue();
+		createdAt = ((JSONString) json.get("created_at")).stringValue();
 	}
 	
 	/**
@@ -69,6 +71,13 @@ public class StatusMessage{
 		return user;
 	}
 
+	/**
+	 * @return String description of message creation date.
+	 */
+	public String getCreatedAt(){
+		return createdAt;
+	}
+	
 	/**
 	 * @return The status update text.
 	 */
