@@ -45,9 +45,6 @@ public class StweetMap implements EntryPoint,StatusMessageViewListener{
 	private GoogleMapPopupPanel googleMapView = null;
 	private GoogleMapPanel		googleMapPanel = null;
 	
-	private static final String LATITUDE_KEY="Va";
-	private static final String LONGITUDE_KEY="Wa";
-	
 	///////////////////////////////////////////////////////////////////
 	//			UI Layout stuff                                      //
 	///////////////////////////////////////////////////////////////////
@@ -222,9 +219,17 @@ public class StweetMap implements EntryPoint,StatusMessageViewListener{
 			JSONObject entry = (JSONObject) json.get(key);
 			JSONObject geometry = (JSONObject) entry.get("geometry");
 			JSONObject location = (JSONObject) geometry.get("location");
-			JSONNumber latitude = (JSONNumber) location.get(LATITUDE_KEY);
-			JSONNumber longitude = (JSONNumber) location.get(LONGITUDE_KEY);
-			statusMessage.setLatLng(latitude.doubleValue(),longitude.doubleValue());
+			String[] locationInfo = new String[2];
+			locationInfo = location.keySet().toArray(locationInfo);
+			for ( String s : locationInfo){
+				GWT.log(s);
+			}
+
+			if (locationInfo.length >= 2){
+				JSONNumber latitude = (JSONNumber) location.get(locationInfo[0]);
+				JSONNumber longitude = (JSONNumber) location.get(locationInfo[1]);
+				statusMessage.setLatLng(latitude.doubleValue(),longitude.doubleValue());
+			}
 		}
 	}
 
