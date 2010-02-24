@@ -7,6 +7,8 @@
 */
 package com.kafecho.stweetmap.client;
 
+import java.util.StringTokenizer;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -81,7 +83,6 @@ public class StatusMessageView extends Composite implements StatusMessageListene
 					listener.onShowLocationSelected(tv);
 				}
 			}});
-		
 		
 		textContainer.add(userName);
 		textContainer.add(userLocation);

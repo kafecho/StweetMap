@@ -95,10 +95,10 @@ public class StweetMap implements EntryPoint,StatusMessageViewListener{
 		FlowPanel bottomPanel = new FlowPanel();
 		
 		
-		HTML contactDetails = new HTML("<a href='mailto:kafecho@gmail.com'>Comments and suggestions</a>");
-		contactDetails.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		HTML stweetMapOnGitHub = new HTML("<a target = '_blank' href='http://github.com/kafecho/StweetMap'>Get the code from GitHub</a>");
+		stweetMapOnGitHub.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		mainPanel.add(bottomPanel);
-		bottomPanel.add(contactDetails);
+		bottomPanel.add(stweetMapOnGitHub);
 		bottomPanel.addStyleName("bottomPanel");
 		
 		tabPanel.setWidth("100%");

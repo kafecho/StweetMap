@@ -12,6 +12,6 @@ package com.kafecho.stweetmap.client;
  * @author Guillaume Belrose
  */
 public class Config {
-	public static final boolean isGeolocationEnabled = true;
+	public static final boolean isGeolocationEnabled = false;
 	public static final int 	returnsPerSearch = 20;
 }
